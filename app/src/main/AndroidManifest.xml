@@ -13,7 +13,7 @@
         android:theme="@style/Theme.TabLayout"
         tools:targetApi="35">
 
-        <!-- Splash Activity (Launcher) -->
+        <!-- Splash Activity (Launcher) - Exported since it starts the app -->
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -23,30 +23,35 @@
             </intent-filter>
         </activity>
 
-        <!-- Login Activity (Redirected if user is not logged in) -->
+        <!-- Login Activity -->
         <activity
             android:name=".LoginActivity"
-            android:exported="true" />
+            android:exported="false" />
 
-        <!-- Register Activity (Redirected for registration if needed) -->
+        <!-- Register Activity -->
         <activity
             android:name=".RegisterActivity"
-            android:exported="true" />
+            android:exported="false" />
 
-        <!-- Property Detail Activity (For showing property details) -->
+        <!-- Property Detail Activity -->
         <activity
             android:name=".PropertyDetailActivity"
-            android:exported="true" />
+            android:exported="false" />
 
         <!-- Main Activity (After login) -->
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="false" />
 
         <!-- Landowner Main Activity (After login for Landowner) -->
         <activity
             android:name=".LandownerMainActivity"
-            android:exported="true" />
+            android:exported="false" />
+
+        <!-- Edit Property Activity (For editing property details) -->
+        <activity
+            android:name=".EditPropertyActivity"
+            android:exported="false" />
 
     </application>
 

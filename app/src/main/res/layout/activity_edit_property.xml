@@ -2,6 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     android:padding="16dp">
 
     <!-- Title -->
@@ -9,34 +10,50 @@
         android:id="@+id/etTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:paddingVertical="12dp"
         android:hint="Title"
-        android:inputType="text" />
+        android:inputType="text"
+        android:layout_gravity="center"
+        android:paddingHorizontal="24dp" />
 
     <!-- Location -->
     <EditText
         android:id="@+id/etLocation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:paddingVertical="12dp"
         android:hint="Location"
-        android:inputType="text" />
+        android:inputType="text"
+        android:layout_gravity="center"
+        android:paddingHorizontal="24dp" />
 
     <!-- Price -->
     <EditText
         android:id="@+id/etPrice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:paddingVertical="12dp"
         android:hint="Price (৳)"
-        android:inputType="number" />
+        android:inputType="number"
+        android:layout_gravity="center"
+        android:paddingHorizontal="24dp" />
 
     <!-- Details -->
     <EditText
         android:id="@+id/etDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:paddingVertical="12dp"
         android:hint="Details"
         android:inputType="textMultiLine"
         android:lines="4"
-        android:gravity="top" />
+        android:gravity="top"
+        android:layout_gravity="center"
+        android:paddingHorizontal="24dp" />
 
     <!-- Save Button -->
     <Button
@@ -46,5 +63,8 @@
         android:text="Save"
         android:backgroundTint="@android:color/holo_blue_dark"
         android:textColor="@android:color/white"
-        android:layout_marginTop="16dp" />
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="24dp" />
+
 </LinearLayout>
