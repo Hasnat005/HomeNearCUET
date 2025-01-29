@@ -1,15 +1,6 @@
 package com.example.tablayout
 
-//data class Property(
-//    val title: String,
-//    val location: String,
-//    val price: Int,
-//    val imageResId: Int,
-//    val latitude: Double,
-//    val longitude: Double,
-//    val details: String, // Property details
-//    val landownerId: String // Landowner ID to check ownership
-//)
+
 data class Property(
     val title: String,
     val location: String,

@@ -16,11 +16,13 @@ class SplashActivity : AppCompatActivity() {
             val sharedPreferences = getSharedPreferences("appPrefs", MODE_PRIVATE)
             val isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false)
 
+
 //            val nextActivity = if (isLoggedIn) {
 //                MainActivity::class.java
 //            } else {
 //                LoginActivity::class.java
 //            }
+
 
             val nextActivity = MainActivity::class.java
 
