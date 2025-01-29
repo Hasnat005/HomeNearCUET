@@ -1,4 +1,5 @@
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -31,32 +32,49 @@
             <!-- Property Title -->
             <TextView
                 android:id="@+id/tvPropertyTitle"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Cozy Room Near Campus"
                 android:textStyle="bold"
                 android:textSize="16sp"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:ellipsize="end"
+                android:maxLines="1" />
 
             <!-- Property Additional Details -->
             <TextView
                 android:id="@+id/tvPropertyDetails"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="2 students, 1 bathroom, Wi-Fi included"
                 android:textSize="14sp"
-                android:textColor="@android:color/darker_gray" />
+                android:textColor="@android:color/darker_gray"
+                android:ellipsize="end"
+                android:maxLines="2" />
 
             <!-- Property Price -->
             <TextView
                 android:id="@+id/tvPropertyPrice"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text="৳ 5000"
                 android:textStyle="bold"
                 android:textSize="14sp"
                 android:textColor="@android:color/holo_red_dark" />
+
+            <!-- Edit Button -->
+            <Button
+                android:id="@+id/btnEditProperty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:text="Edit Property"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:fontFamily="sans-serif-medium" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

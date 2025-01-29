@@ -12,15 +12,42 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TabLayout"
         tools:targetApi="35">
+
+        <!-- Splash Activity (Launcher) -->
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Login Activity (Redirected if user is not logged in) -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+
+        <!-- Register Activity (Redirected for registration if needed) -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true" />
+
+        <!-- Property Detail Activity (For showing property details) -->
+        <activity
+            android:name=".PropertyDetailActivity"
+            android:exported="true" />
+
+        <!-- Main Activity (After login) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+
+        <!-- Landowner Main Activity (After login for Landowner) -->
+        <activity
+            android:name=".LandownerMainActivity"
+            android:exported="true" />
+
     </application>
 
 </manifest>

@@ -1,8 +1,24 @@
 package com.example.tablayout
 
+//data class Property(
+//    val title: String,
+//    val location: String,
+//    val price: Int,
+//    val imageResId: Int,
+//    val latitude: Double,
+//    val longitude: Double,
+//    val details: String, // Property details
+//    val landownerId: String // Landowner ID to check ownership
+//)
 data class Property(
     val title: String,
     val location: String,
     val price: Int,
-    val imageResId: Int
+    val details: String,
+    val landownerId: String,
+    val imageResId: Int, // Image resource ID for the property image
+    val googleMapsLink: String, // Optional Google Maps link for the property location
+    val latitude: Double, // Latitude of the property
+    val longitude: Double // Longitude of the property
 )
+

@@ -7,7 +7,7 @@
     android:background="@color/white"
     android:padding="16dp">
 
-    <!-- All Properties Section -->
+    <!-- Title Section for Available Rentals -->
     <TextView
         android:id="@+id/tvAllPropertiesTitle"
         android:layout_width="wrap_content"
@@ -19,8 +19,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- RecyclerView to Display All Properties -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvAllProperties"
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"

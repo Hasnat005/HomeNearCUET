@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="primary_color">#6200EE</color> <!-- Add this line -->
+    <color name="splash_text_color">#FFFFFF</color>
+    <color name="primaryColor">#6200EE</color>
+    <color name="gray">#BDBDBD</color>
+    <color name="red">#F44336</color>
 </resources>

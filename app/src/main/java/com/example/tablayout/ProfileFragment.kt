@@ -1,5 +1,8 @@
 package com.example.tablayout
 
+
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,10 +11,10 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.edit
 import androidx.fragment.app.Fragment
 
 class ProfileFragment : Fragment() {
-
     // Replace these values with real user data
     private val userName = "John Doe"
     private val userId = "12345678"
@@ -37,6 +40,7 @@ class ProfileFragment : Fragment() {
         val profileWiFi: TextView = rootView.findViewById(R.id.profile_wifi)
         val btnEditProfile: Button = rootView.findViewById(R.id.btn_edit_profile)
         val btnChangePassword: Button = rootView.findViewById(R.id.btn_change_password)
+        val btnLogout: Button = rootView.findViewById(R.id.btn_logout)
 
         // Set user data to the views
         profileImage.setImageResource(userProfileImage)
@@ -56,6 +60,21 @@ class ProfileFragment : Fragment() {
         btnChangePassword.setOnClickListener {
             Toast.makeText(context, "Change Password clicked", Toast.LENGTH_SHORT).show()
             // Add navigation or logic for changing the password
+        }
+
+        // Logout button functionality
+        btnLogout.setOnClickListener {
+            // Clear login state
+            val sharedPreferences = requireActivity().getSharedPreferences("appPrefs", Context.MODE_PRIVATE)
+            sharedPreferences.edit {
+                putBoolean("isLoggedIn", false)
+            }
+
+            // Redirect to LoginActivity
+            val intent = Intent(requireContext(), LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            requireActivity().finish()
         }
 
         return rootView

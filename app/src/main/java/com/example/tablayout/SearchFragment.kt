@@ -43,8 +43,8 @@ class SearchFragment : Fragment() {
         val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_dropdown_item, sortOptions)
         spinnerSort.adapter = adapter
 
-        // Setup RecyclerView
-        searchAdapter = PropertyAdapter(allProperties)
+        // Setup RecyclerView with context passed to PropertyAdapter
+        searchAdapter = PropertyAdapter(allProperties, requireContext(), "12345")  // Pass the context here
         rvSearchResults.layoutManager = LinearLayoutManager(requireContext())
         rvSearchResults.adapter = searchAdapter
 
@@ -57,8 +57,8 @@ class SearchFragment : Fragment() {
         spinnerSort.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 when (position) {
-                    1 -> sortPropertiesAscending()
-                    2 -> sortPropertiesDescending()
+                    0 -> sortPropertiesAscending() // Price: Low to High
+                    1 -> sortPropertiesDescending() // Price: High to Low
                 }
             }
 
@@ -94,10 +94,39 @@ class SearchFragment : Fragment() {
 
     private fun getAllProperties(): List<Property> {
         return listOf(
-            Property("GorisonkorHat", "CUET", 300, R.drawable.property1),
-            Property("Cuet Gate", "CUET", 1000, R.drawable.property2),
-            Property("Pahartoli", "CUET", 550, R.drawable.property3),
-            Property("Nowapara", "CUET", 1200, R.drawable.property4)
+            Property(
+                "2-Bedroom Apartment Near CUET",
+                "CUET Road, Chattogram",
+                7000,
+                "A spacious 2-bedroom apartment with modern amenities, located just 5 minutes from CUET.",
+                "012345",
+                R.drawable.property1,
+                "https://www.google.com/maps",
+                22.4591,
+                91.9692
+            ),
+            Property(
+                "Cozy Studio for Students",
+                "Gate No. 1, CUET",
+                5000,
+                "Perfect for students, this studio includes Wi-Fi, a single bedroom, and easy access to CUET.",
+                "067890",
+                R.drawable.property2,
+                "https://www.google.com/maps",
+                22.4593,
+                91.9695
+            ),
+            Property(
+                "Modern 3-Bedroom House",
+                "Sholoshahar Road, CUET Area",
+                12000,
+                "A fully furnished 3-bedroom house with a garden and parking space, ideal for families near CUET.",
+                "012345",
+                R.drawable.property3,
+                "https://www.google.com/maps",
+                22.4587,
+                91.9689
+            )
         )
     }
 }
